@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowRight, ArrowUpRight, BriefcaseBusiness, CodeXml, Mail } from 'lucide-react'
+import { ArrowDown, ArrowRight, ArrowUpRight, CodeXml, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
 import ProjectCard, { type Project } from './components/ProjectCard'
 import PortfolioIntro from './components/PortfolioIntro'
@@ -49,13 +49,6 @@ function App() {
     <main className="overflow-hidden">
       <header className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 sm:px-10 lg:px-12">
         <a href="#inicio" className="flex items-center gap-3" aria-label="Inicio">
-          <img
-            src="/Hornero-Arq.jpg"
-            alt=""
-            aria-hidden="true"
-            decoding="async"
-            className="h-auto w-12 rounded-md border border-white/10 sm:w-14"
-          />
           <span className="font-mono text-sm font-semibold tracking-[0.12em] text-slate-100">
             HORNERO<span className="text-clay">-ARQ</span>
           </span>
@@ -152,11 +145,8 @@ function App() {
             className="mt-12 flex items-center gap-5 text-slate-500"
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.2em]">También en</span>
-            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-clay">
+            <a href="https://github.com/jcmembrilla" target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-clay">
               <CodeXml size={17} />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="transition-colors hover:text-aqua">
-              <BriefcaseBusiness size={17} />
             </a>
           </motion.div>
         </div>
