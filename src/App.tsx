@@ -24,6 +24,16 @@ const projects: Project[] = [
     demoUrl: 'https://localcomercio.com.ar/',
     number: '02',
   },
+  {
+    name: 'Radios ARG',
+    category: 'Radio online',
+    description:
+      'Una experiencia de radio online, siempre a tu alcance.',
+    technologies: [],
+    accent: 'cyan',
+    demoUrl: 'https://radiosarg.netlify.app/',
+    number: '03',
+  },
 ]
 
 const riseIn = {
@@ -206,7 +216,7 @@ function App() {
           </p>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="grid gap-5 lg:grid-cols-3">
           {projects.map((project, index) => (
             <ProjectCard key={project.name} project={project} index={index} />
           ))}
