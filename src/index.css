@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --color-clay: var(--accent-primary);
+  --color-aqua: var(--accent-secondary);
+  --color-cyan: var(--accent-tertiary);
+}
+
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #090c12;
+  color: #f8fafc;
+
+  /* Adjust these three values to quickly retune the portfolio's accent palette. */
+  --accent-primary: #e5a36e;
+  --accent-secondary: #77dcc2;
+  --accent-tertiary: #70c7f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% -30%, rgba(35, 48, 67, 0.34), transparent 55%),
+    #090c12;
+}
+
+::selection {
+  color: #090c12;
+  background: #e5a36e;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes portfolio-logo-reveal {
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes portfolio-intro-scan {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes portfolio-intro-code-draw {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 1;
+  }
+
+  25% {
+    opacity: 0.85;
+  }
+
+  100% {
+    opacity: 0.2;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes portfolio-intro-code-label {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  25%,
+  70% {
+    opacity: 0.85;
+  }
+}
+
+.portfolio-logo-reveal {
+  clip-path: inset(0 100% 0 0);
+  animation: portfolio-logo-reveal 1.55s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.portfolio-intro-scan {
+  left: 0;
+  animation: portfolio-intro-scan 1.55s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.portfolio-intro-code path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  opacity: 0;
+  animation: portfolio-intro-code-draw 1.25s ease-out forwards;
+}
+
+.portfolio-intro-code-label {
+  opacity: 0;
+  animation: portfolio-intro-code-label 1.3s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .portfolio-logo-reveal {
+    clip-path: inset(0);
+    animation: none;
+  }
+
+  .portfolio-intro-scan {
+    display: none;
+  }
+
+  .portfolio-intro-code path,
+  .portfolio-intro-code-label {
+    animation: none;
+    opacity: 0.2;
+    stroke-dashoffset: 0;
+  }
+}
