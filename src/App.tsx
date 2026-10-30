@@ -71,7 +71,8 @@ function App() {
         </nav>
 
         <a
-          href="#contacto"
+          href="mailto:membrillajc@gmail.com"
+          aria-label="Enviar un email a membrillajc@gmail.com"
           className="inline-flex items-center gap-2 rounded-full border border-clay/30 px-4 py-2 text-xs font-medium text-clay transition hover:border-clay/60 hover:bg-clay/10"
         >
           Hablemos <ArrowUpRight size={14} aria-hidden="true" />
@@ -236,16 +237,23 @@ function App() {
               Si tienes una idea, un desafío interesante o simplemente quieres conectar, mi bandeja está abierta.
             </p>
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=membrillajc%40gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Redactar un email a membrillajc@gmail.com en Gmail"
+              href="mailto:membrillajc@gmail.com"
+              aria-label="Enviar un email a membrillajc@gmail.com"
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-clay"
             >
               <Mail size={16} aria-hidden="true" />
               Email
               <ArrowUpRight size={15} aria-hidden="true" />
             </a>
+            <p className="mt-3 text-sm text-slate-500">
+              ¿No se abrió el correo? Escríbeme a{" "}
+              <a
+                href="mailto:membrillajc@gmail.com"
+                className="font-mono text-slate-400 transition-colors hover:text-white"
+              >
+                membrillajc@gmail.com
+              </a>
+            </p>
           </div>
         </div>
       </section>
