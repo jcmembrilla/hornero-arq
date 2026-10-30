@@ -34,6 +34,16 @@ const projects: Project[] = [
     demoUrl: 'https://radiosarg.netlify.app/',
     number: '03',
   },
+  {
+    name: 'Simple Agenda',
+    category: 'Productividad',
+    description:
+      'Agenda simple y práctica para organizar tus días y no olvidar nada importante.',
+    technologies: [],
+    accent: 'clay',
+    demoUrl: 'https://simple-agenda.netlify.app/',
+    number: '04',
+  },
 ]
 
 const riseIn = {
