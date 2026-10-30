@@ -246,7 +246,6 @@ function App() {
               <ArrowUpRight size={15} aria-hidden="true" />
             </a>
             <p className="mt-3 text-sm text-slate-500">
-              ¿No se abrió el correo? Escríbeme a{" "}
               <a
                 href="mailto:membrillajc@gmail.com"
                 className="font-mono text-slate-400 transition-colors hover:text-white"
